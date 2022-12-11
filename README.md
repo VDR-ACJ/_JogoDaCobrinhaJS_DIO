@@ -1,6 +1,6 @@
 # _JogoDaCobrinhaJS_DIO
 
-Projeto criado para o desafio "Recriando o Jogo da Cobrinha com JavaScript" utilizando HTML, CSS e Javascript. 
+Projeto criado para o desafio "Recriando o Jogo da Cobrinha com JavaScript" utilizando HTML, CSS e JavaScript. 
 Em relação ao projeto base, foram incrementadas algumas funcionalidades:
 Efeitos e ações para os botões combinando JS e CSS, inclusão de fontes personalizadas e layout no formato de celular com eventos no teclado numérico no estilo dos antigos celulares.
 
