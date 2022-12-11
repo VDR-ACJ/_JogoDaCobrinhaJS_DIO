@@ -1,6 +1,15 @@
 let canvas = document.getElementById("snake");
+let score = document.getElementById("score");
+let level = document.getElementById("level");
+var countscore = 0;
+var levelPadrao = 200;
+var countLevel = 0;
+//var levelPadrao = 100;
+
+
 let context = canvas.getContext("2d");
-let box = 32;
+//let box = 32;
+let box = 16 ;
 let snake = [];
 let corTela = "#b2a103";
 let corTelaDesenho ="#343300";
@@ -48,6 +57,24 @@ function updateEntrada(event){
     if(event.keyCode == 39 && direction != "left") direction ="right";
     if(event.keyCode == 40 && direction != "up") direction ="down";
 }
+document.getElementById("up").addEventListener('click',moveup);
+function moveup() {
+    if(direction != "down") direction ="up";
+}
+document.getElementById("down").addEventListener('click',movedown);
+function movedown() {
+    if(direction != "up") direction ="down";
+}
+document.getElementById("left").addEventListener('click',moveleft);
+function moveleft() {
+    if(direction != "right") direction ="left";
+}
+document.getElementById("right").addEventListener('click',moveright);
+function moveright() {
+    if(direction != "left") direction ="right";
+}
+
+
 
 function inicarJogo(){
 
@@ -69,6 +96,7 @@ function inicarJogo(){
     criarCobrinha(); 
     drawFood();
     
+
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
 
@@ -81,12 +109,14 @@ function inicarJogo(){
     if(snakeX !=food.x || snakeY != food.y){
     //remove o ultimo elemento da cobrinha
     snake.pop();
+    
     }
     else{
         food.x =Math.floor(Math.random() * 15 + 1) * box,
         food.y = Math. floor(Math.random() * 15 + 1) * box;
     }   
 
+    score.innerHTML= snake.length;
     //nova cabeca para a cobrinha
     let newHead = {
         x: snakeX,
@@ -97,7 +127,16 @@ function inicarJogo(){
 
 }
 
-let jogo = setInterval(inicarJogo, 100);
+let jogo = setInterval(inicarJogo, levelPadrao);
 
 
+//levels
+
+function levelup() {
+    levelPadrao=levelPadrao+100;
+    countLevel = countLevel + 1;
+    level.innerHTML= countLevel;
+
+    jogo = setInterval(inicarJogo, levelPadrao);
+}
 

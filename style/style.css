@@ -1,14 +1,93 @@
 *:root{
     --cortelagameby:#b2a103;
 }
+@font-face {
+    font-family: 'digital-font';
+    src: url('../font/DS-DIGIB.TTF');
+}
+
 body{
-    height: 95vh;
+    height: 100%;
     width: 95;
     display: flex;
+    font-family: digital-font;
     /*alinha horizontalmente*/
-    justify-content: center;
+    /*justify-content: center;*/
     /*alinha verticalmente*/
     align-items: center;
     flex-direction: column;
-    color: rgb(44, 139, 44);
+    color: rgb(203, 212, 203);
+    background-color: rgb(4, 4, 4);
+    padding: 5px;
+}
+#snake{
+    margin: 0;
+}
+
+h1{
+    font-size: 14px;
+    color: #243302;
+    background: #938509;
+}
+
+button{
+    margin: 2px;
+    width: 60px;
+    height: 60px;
+}
+button:active{
+ background-color: #c8c4c497;
+ color: aquamarine;
+}
+
+#botoes{
+   margin-top: 5px; 
+   text-align:center;
+   
+}
+
+.header-jogo{
+    width: 100%;
+    height: fit-content;
+    width: 256px;
+    margin-top: 30px;
+    background-color: var(--cortelagameby);
+    text-align: center;
+    
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #303d49;
+    padding: 10px;
+    padding-bottom: 80px;
+    padding-top: 30px;
+    border-radius: 10px;
+}
+.speaker{
+    width: 100px;
+   height: 20px;
+   background-color: #4c5f70;
+   text-align: center;
+}
+
+hr{
+    width: 80%;
+}
+
+.level-left{
+    width: 100px;
+    height: 30px;
+    border-bottom-left-radius: 10px;
+    color: #243302;
+}
+
+.level-right{
+    width: 100px;
+    height: 30px;
+    border-bottom-right-radius: 10px;
+    color: brown;
 }

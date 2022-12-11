@@ -6,11 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
     <script defer src="./js/script.js"></script>
+        </script>
     <title>Snake Game</title>
 </head>
 <body>
-    <h1>SNAKE GAME</h1>
-    <canvas id="snake" width="512" height="512"></canvas>
+    <div class="main">
+    <div class="header-logo"><!--img id="img_logo" src="../img/nokia.PNG" -->
+        <div class="speaker">.....</div>
+    </div>
+    <div class="header-jogo">
+        <h1>SCORE: <SPAN id="score">0</SPAN>&nbsp; &nbsp; &nbsp; 
+         Level: <SPAN id="level">0</SPAN>
+        </h1>
+    </div>
+    <div class="display-game">
+        <canvas id="snake" width="256" height="256"></canvas>
+    </div>
     
+    <div id="botoes">
+        <button class="level-left"><b>&#9742;</b></button>
+        <button class="level-right"><b>&#9742;</b></button>
+        
+        <br><br>
+        <button  onclick="levelup()"><b>1</b><br>#</button>
+        <button id="up" onclick="moveup()"><b>2</b><br>abc</button>
+        <button><b>3</b><br>def</button>
+        <br>
+        
+        <button id="left" onclick="moveleft()">4<br>ghi</button>
+        <button>5<br>jkl</button>
+        <button id="right" onclick="moveright()"><b>6</b></br>mno<br></button><br>
+        
+        <button><b>7</b><br>pqrs</button>
+        <button id="down" onclick="movedown()"><b>8</b><br>tuv</button>
+        <button><b>9</b><br>wxyz</button>
+        <br>
+        <button><b>*</b><br></button>
+        <button><b>0</b><br></button>
+        <button><b>:)</b><br></button>
+      </div>
+      <br>
+      <hr>
+    </div>
 </body>
 </html>

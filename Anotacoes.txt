@@ -1,1 +1,3 @@
--Customizar tela principal com um console portatil
+-Customizar tela principal como celular - ok
+-Adicionar eventos aos botoes 2 4 6 8 - ok
+-botao 1 aumenta o level - ok 
